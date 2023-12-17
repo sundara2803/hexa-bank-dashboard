@@ -13,7 +13,7 @@
         <h1>{{balanceData?.total_balance| currency:'USD':'symbol':'1.2-2'}}</h1>
     </div>
     <div class="progress-bar-container">
-        <div class="progress-bar" [style.width]="balanceData?.payment_done_percentage + '%'"></div>
+        <div class="progress-bar" [ngStyle]="{'width': balanceData?.payment_done_percentage + '%'}"></div>
     </div>
     <div class="progress-bar-bottom">
         <div class="left">Monthly payment limit</div>

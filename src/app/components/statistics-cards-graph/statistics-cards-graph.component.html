@@ -17,7 +17,7 @@
                 currency:'USD':'symbol':'1.2-2'}}
             </h3>
             <div class="money-data">
-                <div [style.color]="moneyStatisticsData?.total_income?.trend_color">
+                <div [ngStyle]="{'color': moneyStatisticsData?.total_income?.trend_color}">
                     <fa-icon [icon]="faChartLine"></fa-icon>
                     <h6 class="margin-right">{{ '+ '+moneyStatisticsData?.total_income?.trend +'%'}}</h6>
                     <h6 class="tertiary-color">from last month</h6>
@@ -31,7 +31,7 @@
                 currency:'USD':'symbol':'1.2-2'}}
             </h3>
             <div class="money-data">
-                <div [style.color]="moneyStatisticsData?.total_expense?.trend_color">
+                <div [ngStyle]="{'color': moneyStatisticsData?.total_expense?.trend_color}">
                     <fa-icon [icon]="faChartLine"></fa-icon>
                     <h6 class="margin-right">{{'+ '+ moneyStatisticsData?.total_expense?.trend +'%'}}</h6>
                     <h6 class="tertiary-color">from last month</h6>
@@ -45,7 +45,7 @@
                 currency:'USD':'symbol':'1.2-2'}}
             </h3>
             <div class="money-data">
-                <div [style.color]="moneyStatisticsData?.total_investment?.trend_color">
+                <div [ngStyle]="{'color': moneyStatisticsData?.total_investment?.trend_color}">
                     <fa-icon [icon]="faChartLine"></fa-icon>
                     <h6 class="margin-right">{{ '+ '+moneyStatisticsData?.total_investment?.trend +'%'}}</h6>
                     <h6 class="tertiary-color">from last month</h6>

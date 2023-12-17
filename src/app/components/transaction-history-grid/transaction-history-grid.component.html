@@ -47,7 +47,7 @@
                 <tr *ngFor="let transaction of filteredTransactions; let i = index">
                     <td>{{ transaction.date | date:'mediumDate' }}</td>
                     <td><fa-icon [icon]="faUserAstronaut" class="primary-color icon-padding"></fa-icon> {{ transaction.name }}</td>
-                    <td [style.color]="getStatusColor(transaction.status)">{{ transaction.status }}</td>
+                    <td [ngStyle]="{'color': getStatusColor(transaction.status)}">{{ transaction.status }}</td>
                     <td>{{ transaction.type }}</td>
                     <td>{{ transaction.date | date:'shortTime' }}</td>
                     <td>{{ transaction.amount | currency:'USD':'symbol':'1.2-2' }}</td>
