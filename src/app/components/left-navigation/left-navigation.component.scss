@@ -64,8 +64,8 @@
             flex-direction: column;
             justify-content: center;
             align-items: center;
-            height: 150px;
-            margin: 10px;
+            aspect-ratio: 1/1; 
+            width: 100%;
         }
     }
 }
