@@ -1,0 +1,38 @@
+<div class="left-nav-container">
+    <div class="profile">
+        <fa-icon [icon]="faUserAstronaut" class="primary-color icon-padding"></fa-icon>
+        <h3 class="profile-name primary-color">Sundara Moorthi</h3>
+        <fa-icon [icon]="faArrowsUpDown" class="primary-color icon-padding"></fa-icon>
+    </div>
+    <hr>
+    <div class="menu">
+        <h3 class="tertiary-color">Menu</h3>
+        <div class="menu-container">
+            <ul>
+                <li *ngFor="let menuItem of menuItems">
+                    <fa-icon [icon]="menuItem.iconClass" class="tertiary-color icon-padding"></fa-icon>{{ menuItem.label
+                    }}
+                </li>
+            </ul>
+        </div>
+        <hr>
+    </div>
+    <div class="general">
+        <h3 class="tertiary-color">General</h3>
+        <div class="menu-container">
+            <ul>
+                <li *ngFor="let menuItem of generalItems">
+                    <fa-icon [icon]="menuItem.iconClass" class="tertiary-color icon-padding"></fa-icon>{{ menuItem.label
+                    }}
+                </li>
+            </ul>
+        </div>
+        <hr>
+    </div>
+    <div class="payment">
+        <div class="payment-box">
+            <fa-icon [icon]="faAdd" class="primary-color icon-padding"></fa-icon>
+            <h5>New Payment</h5>
+        </div>
+    </div>
+</div>

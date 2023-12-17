@@ -1,0 +1,94 @@
+<div class="first-static-column">
+    <div class="top">
+        <div class="top-start">
+            <h3 class="primary-color">
+                My Cards1/</h3><small class="tertiary-color small">2</small>
+        </div>
+        <div class="top-end">
+            <fa-icon [icon]="faAngleLeft" class="primary-color icon-padding"></fa-icon>
+            <fa-icon [icon]="faAngleRight" class="primary-color icon-padding"></fa-icon>
+        </div>
+    </div>
+    <div class="card">
+        <img [src]="imageURL" class="image-padding" alt="Example Image">
+        <div class="add-card">
+            <fa-icon [icon]="faAdd" class="primary-color icon-padding"></fa-icon>
+            <p class="primary-color">Add New Card</p>
+        </div>
+        <hr>
+    </div>
+    <div class="quick-actions-container">
+        <h3>Quick Actions</h3>
+        <div class="quick-actions">
+            <div class="quick-actions-start">
+                <fa-icon [icon]="faAdd" class="primary-color icon-padding"></fa-icon>
+                <p class="primary-color">Top Up</p>
+            </div>
+            <div class="vertical-line"></div>
+            <div class="quick-actions-middle">
+                <fa-icon [icon]="faPaperPlane" class="primary-color icon-padding"></fa-icon>
+                <p class="primary-color">Transfer</p>
+            </div>
+            <div class="vertical-line"></div>
+            <div class="quick-actions-end">
+                <fa-icon [icon]="faMoneyBillTransfer" class="primary-color icon-padding"></fa-icon>
+                <p class="primary-color">Withdraw</p>
+            </div>
+        </div>
+        <hr>
+    </div>
+    <div class="savings-plan-container">
+        <div class="top">
+            <div class="top-start">
+                <h3 class="primary-color">Savings Plan</h3>
+            </div>
+            <div class="top-end">
+                <fa-icon [icon]="faAdd" class="primary-color icon-padding"></fa-icon>
+            </div>
+        </div>
+        <div class="new-watch">
+            <div class="top">
+                <div class="top-start">
+                    <fa-icon [icon]="faClock" class="primary-color icon-padding"></fa-icon>
+                </div>
+                <div class="top-middle">
+                    <h5 class="primary-color">New Watch</h5>
+                    <h6 class="tertiary-color">Target $2000</h6>
+                </div>
+                <div class="top-end">
+                    <fa-icon [icon]="faEllipsis" class="primary-color icon-padding"></fa-icon>
+                </div>
+            </div>
+            <div class="progress-bar-top">
+                <div class="left  primary-color"><small>Target $1000</small></div>
+                <div class="right tertiary-color"><small>50%</small>
+                </div>
+            </div>
+            <div class="progress-bar-container">
+                <div class="progress-bar" [style.width]="'50%'"></div>
+            </div>
+        </div>
+        <div class="play-station">
+            <div class="top">
+                <div class="top-start">
+                    <fa-icon [icon]="faGamepad" class="primary-color icon-padding"></fa-icon>
+                </div>
+                <div class="top-middle">
+                    <h5 class="primary-color ">Play Station 5</h5>
+                    <h6 class="tertiary-color">Target $2000</h6>
+                </div>
+                <div class="top-end">
+                    <fa-icon [icon]="faEllipsis" class="primary-color icon-padding"></fa-icon>
+                </div>
+            </div>
+            <div class="progress-bar-top">
+                <div class="left primary-color"><small>Target $1000</small></div>
+                <div class="right tertiary-color"><small>50%</small>
+                </div>
+            </div>
+            <div class="progress-bar-container">
+                <div class="progress-bar" [style.width]="'50%'"></div>
+            </div>
+        </div>
+    </div>
+</div>

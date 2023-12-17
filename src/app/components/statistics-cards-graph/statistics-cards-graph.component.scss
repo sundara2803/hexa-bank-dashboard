@@ -1,0 +1,92 @@
+.statistics-graph {
+    width: 100%;
+    margin: 5px;
+    background-color: #ffffff;
+    color: #000000;
+    padding: 16px 16px;
+    border-radius: 5px;
+    border: none;
+    display: flex;
+    flex-direction: column;
+
+    .top {
+        display: flex;
+        flex-direction: row;
+
+        .top-start {
+            display: flex;
+            text-align: left;
+            flex: 1;
+        }
+
+        .top-end {
+            text-align: right;
+        }
+    }
+
+    .statistics-data {
+        padding: 20px 0px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        .total-income {
+            display: flex;
+            flex-direction: column;
+            align-content: space-evenly;
+
+            .money-data {
+                display: flex;
+                align-items: center;
+
+                div {
+                    display: flex;
+                    align-items: center;
+                }
+            }
+
+        }
+
+        .total-expense {
+            display: flex;
+            flex-direction: column;
+
+            .money-data {
+                display: flex;
+                align-items: center;
+
+                div {
+                    display: flex;
+                    align-items: center;
+                }
+            }
+
+        }
+
+        .total-investment {
+            display: flex;
+            flex-direction: column;
+
+            .money-data {
+                display: flex;
+                align-items: center;
+
+                div {
+                    display: flex;
+                    align-items: center;
+                }
+            }
+
+        }
+
+        .y-axis-line {
+            border-left: 1px solid #ccc;
+            height: 100px;
+        }
+
+    }
+
+    .bar-chart {
+        width: 100%;
+    }
+}

@@ -1,0 +1,70 @@
+<div class="transaction-history">
+    <div class="top">
+        <div class="top-start">
+            <h3 class="primary-color">
+                Transaction History
+            </h3>
+        </div>
+        <div class="top-end">
+            <div class="search-container">
+                <div class="input-container">
+                  <fa-icon [icon]="faMagnifyingGlass" class="primary-color icon-padding absolute"></fa-icon>
+                  <input type="text" [(ngModel)]="searchText" placeholder="Search" (input)="search()">
+                </div>
+                <button class="filter-button">
+                  <fa-icon [icon]="faFilter" class="primary-color icon-padding"></fa-icon>
+                  Filter
+                </button>
+                <button class="export-button">
+                  <fa-icon [icon]="faFileExport" class="primary-color icon-padding"></fa-icon>
+                  Export
+                </button>
+                <button class="reset-button" (click)="resetFilter()"><fa-icon [icon]="faRotateRight" class="primary-color icon-padding"></fa-icon></button>
+              </div>
+              
+        </div>
+    </div>
+    <div class="data-table">
+        <table class="transaction-table">
+            <thead>
+                <tr class="heading">
+                    <th (click)="sortBy('date')">Date<fa-icon [icon]="faSort"
+                            class="tertiary-color icon-padding"></fa-icon></th>
+                    <th (click)="sortBy('name')">Name<fa-icon [icon]="faSort"
+                            class="tertiary-color icon-padding"></fa-icon></th>
+                    <th (click)="sortBy('status')">Status<fa-icon [icon]="faSort"
+                            class="tertiary-color icon-padding"></fa-icon></th>
+                    <th (click)="sortBy('type')">Type<fa-icon [icon]="faSort"
+                            class="tertiary-color icon-padding"></fa-icon></th>
+                    <th (click)="sortBy('time')">Time<fa-icon [icon]="faSort"
+                            class="tertiary-color icon-padding"></fa-icon></th>
+                    <th (click)="sortBy('amount')">Amount<fa-icon [icon]="faSort"
+                            class="tertiary-color icon-padding"></fa-icon></th>
+                    <th>Action</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let transaction of filteredTransactions; let i = index">
+                    <td>{{ transaction.date | date:'mediumDate' }}</td>
+                    <td><fa-icon [icon]="faUserAstronaut" class="primary-color icon-padding"></fa-icon> {{ transaction.name }}</td>
+                    <td [style.color]="getStatusColor(transaction.status)">{{ transaction.status }}</td>
+                    <td>{{ transaction.type }}</td>
+                    <td>{{ transaction.date | date:'shortTime' }}</td>
+                    <td>{{ transaction.amount | currency:'USD':'symbol':'1.2-2' }}</td>
+                    <td>
+                        <fa-icon [icon]="faEllipsis" class="primary-color icon-padding"
+                            (click)="openPopup(transaction)"></fa-icon>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
+<div class="popup-container" *ngIf="popupTransaction">
+    <div class="popup">
+        <h2>{{ popupTransaction?.name }}</h2>
+        <p>Type: {{ popupTransaction?.type }}</p>
+        <button (click)="closePopup()">Close</button>
+    </div>
+    <div class="overlay" (click)="closePopup()"></div>
+</div>

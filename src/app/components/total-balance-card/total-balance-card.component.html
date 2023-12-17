@@ -1,0 +1,25 @@
+<div class="total-card">
+    <div class="top">
+        <div class="top-left">
+            <h3 class="primary-color">
+                Total Balance
+            </h3>
+        </div>
+        <div class="top-right">
+            <fa-icon [icon]="faEllipsis" class="primary-color icon-padding"></fa-icon>
+        </div>
+    </div>
+    <div class="total-balance">
+        <h1>{{balanceData?.total_balance| currency:'USD':'symbol':'1.2-2'}}</h1>
+    </div>
+    <div class="progress-bar-container">
+        <div class="progress-bar" [style.width]="balanceData?.payment_done_percentage + '%'"></div>
+    </div>
+    <div class="progress-bar-bottom">
+        <div class="left">Monthly payment limit</div>
+        <div class="right">
+            <div class="primary-color">{{balanceData?.payment_done_so_far| currency:'USD':'symbol':'1.0-0'}}</div>
+            /{{balanceData?.monthly_payment_limit| currency:'USD':'symbol':'1.0-0'}}
+        </div>
+    </div>
+</div>

@@ -1,0 +1,144 @@
+.navbar {
+  .removeable-navbar {
+    top: 0;
+    width: 100%;
+    background-color: #000034;
+    color: #ffffff;
+    padding: 14px 0;
+    text-align: center;
+
+    .content {
+      width: 100%;
+      margin: 0 auto;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      height: 100%;
+
+      .left-section {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 95%;
+
+        .message {
+          margin: 0;
+        }
+
+        .learn-more {
+          margin-left: 10px;
+          background-color: #ffffff;
+          color: #000000;
+          padding: 8px 16px;
+          border-radius: 5px;
+          border: none;
+          cursor: pointer;
+        }
+      }
+
+      .right-section {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 5%;
+
+        .close-btn {
+          font-size: 20px;
+          cursor: pointer;
+        }
+      }
+    }
+  }
+
+  .permanent-navbar {
+    .content {
+      width: 100%;
+      margin: 0 auto;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+
+      .left-section {
+        display: flex;
+        align-items: center;
+        width: 20%;
+        justify-content: space-between;
+        flex-direction: row;
+
+        .left-start {
+          display: flex;
+          flex: 1;
+          text-align: left;
+        }
+
+        .left-end {
+          text-align: right;
+        }
+      }
+
+      .right-section {
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 80%;
+
+        .right-box {
+          width: 100%;
+          margin: 5px;
+          background-color: #ffffff;
+          color: #000000;
+          padding: 16px 16px;
+          border-radius: 5px;
+          border: none;
+          cursor: pointer;
+          display: flex;
+          justify-content: space-evenly;
+          align-items: center;
+
+          .right-start {
+            width: 25%
+          }
+
+          .right-middle {
+            width: 50%;
+
+            .search-container {
+              position: relative;
+              width: 80%;
+
+              .search-input {
+                width: 100%;
+                padding: 10px;
+                border: none;
+                border-radius: 10px;
+                box-sizing: border-box;
+                outline: none;
+                background-color: light#ccc;
+              }
+
+              .search-icon {
+                position: absolute;
+                top: 50%;
+                left: 10px;
+                transform: translateY(-50%);
+              }
+
+              .placeholder-text {
+                position: absolute;
+                top: 30%;
+                left: 40px;
+              }
+            }
+          }
+
+          .right-end {
+            width: 25%;
+            justify-content: flex-end;
+            text-align: end;
+          }
+        }
+      }
+    }
+  }
+}

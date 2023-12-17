@@ -1,0 +1,50 @@
+<div class="navbar">
+    <div class="removeable-navbar" *ngIf="navBarOpen">
+        <div class="content">
+            <div class="left-section">
+                <p class="message">Stay updated on our latest features by receiving notifications from us!</p>
+                <button class="learn-more">Learn More</button>
+            </div>
+            <div class="right-section">
+                <span class="close-btn" (click)="closeNavbar()">x</span>
+            </div>
+        </div>
+    </div>
+    <div class="permanent-navbar">
+        <div class="content">
+            <div class="left-section">
+                <div class="left-start">
+                    <fa-icon [icon]="faCoffee" class="primary-color icon-padding"></fa-icon>
+                    <h2 class="primary-color">
+                        Hexa Bank
+                    </h2>
+                </div>
+                <div class="left-end">
+                    <fa-icon [icon]="faAngleLeft" class="primary-color icon-padding"></fa-icon>
+                </div>
+                <div>
+                </div>
+            </div>
+            <div class="right-section">
+                <div class="right-box">
+                    <div class="right-start">
+                        <h2 class="primary-color">
+                            Overview
+                        </h2>
+                    </div>
+                    <div class="right-middle">
+                        <div class="search-container">
+                            <fa-icon [icon]="faMagnifyingGlass" class="icon-padding search-icon"></fa-icon>
+                            <small class="placeholder-text">Search Anything here ..</small>
+                            <input class="search-input" type="text" disabled />
+                        </div>
+                    </div>
+                    <div class="right-end">
+                        <fa-icon [icon]="faEnvelope" class="primary-color icon-padding"></fa-icon>
+                        <fa-icon [icon]="faBell" class="primary-color icon-padding"></fa-icon>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

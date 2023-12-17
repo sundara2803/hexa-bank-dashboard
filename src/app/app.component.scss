@@ -1,0 +1,38 @@
+.container {
+    overflow: hidden;
+
+    .main-container {
+        display: flex;
+
+        .side-nav {
+            width: 20%;
+            min-height: calc(100vh - 70px);
+            background-color: var(--background-color);
+        }
+
+        .main {
+            display: flex;
+            flex-direction: row;
+            width: 80%;
+
+            .left-section {
+                display: flex;
+                flex-direction: column;
+                width: 35%;
+                margin: 5px;
+                background-color: #ffffff;
+                color: #000000;
+                padding: 16px 16px;
+                border-radius: 5px;
+                border: none;
+                display: flex;
+            }
+
+            .right-section {
+                display: flex;
+                flex-direction: column;
+                width: 65%;
+            }
+        }
+    }
+}

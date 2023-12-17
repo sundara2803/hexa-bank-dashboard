@@ -1,0 +1,60 @@
+<div class="statistics-graph">
+    <div class="top">
+        <div class="top-start">
+            <h3 class="primary-color">
+                Money Statictics
+            </h3>
+        </div>
+        <div class="top-end">
+            <fa-icon [icon]="faSquareCaretDown" class="tertiary-color icon-padding"></fa-icon>
+            <fa-icon [icon]="faEllipsis" class="tertiary-color icon-padding"></fa-icon>
+        </div>
+    </div>
+    <div class="statistics-data">
+        <div class="total-income">
+            <h5 class="tertiary-color">Total Income</h5>
+            <h3 class="primary-color padding-top-bottom">{{moneyStatisticsData?.total_income?.value |
+                currency:'USD':'symbol':'1.2-2'}}
+            </h3>
+            <div class="money-data">
+                <div [style.color]="moneyStatisticsData?.total_income?.trend_color">
+                    <fa-icon [icon]="faChartLine"></fa-icon>
+                    <h6 class="margin-right">{{ '+ '+moneyStatisticsData?.total_income?.trend +'%'}}</h6>
+                    <h6 class="tertiary-color">from last month</h6>
+                </div>
+            </div>
+        </div>
+        <div class="y-axis-line"></div>
+        <div class="total-expense">
+            <h5 class="tertiary-color">Total Expense</h5>
+            <h3 class="primary-color padding-top-bottom">{{moneyStatisticsData?.total_expense?.value |
+                currency:'USD':'symbol':'1.2-2'}}
+            </h3>
+            <div class="money-data">
+                <div [style.color]="moneyStatisticsData?.total_expense?.trend_color">
+                    <fa-icon [icon]="faChartLine"></fa-icon>
+                    <h6 class="margin-right">{{'+ '+ moneyStatisticsData?.total_expense?.trend +'%'}}</h6>
+                    <h6 class="tertiary-color">from last month</h6>
+                </div>
+            </div>
+        </div>
+        <div class="y-axis-line"></div>
+        <div class="total-investment">
+            <h5 class="tertiary-color">Total Investment</h5>
+            <h3 class="primary-color padding-top-bottom">{{moneyStatisticsData?.total_investment?.value |
+                currency:'USD':'symbol':'1.2-2'}}
+            </h3>
+            <div class="money-data">
+                <div [style.color]="moneyStatisticsData?.total_investment?.trend_color">
+                    <fa-icon [icon]="faChartLine"></fa-icon>
+                    <h6 class="margin-right">{{ '+ '+moneyStatisticsData?.total_investment?.trend +'%'}}</h6>
+                    <h6 class="tertiary-color">from last month</h6>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="bar-chart">
+        <highcharts-chart *ngIf="chartOptions" [Highcharts]="highCharts" [options]="chartOptions">
+        </highcharts-chart>
+    </div>
+</div>

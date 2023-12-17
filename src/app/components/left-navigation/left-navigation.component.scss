@@ -1,0 +1,71 @@
+.left-nav-container {
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+
+    .profile {
+        display: flex;
+        align-items: center;
+        padding:10px 0px;
+
+        .profile-name {
+            flex: 1;
+        }
+
+    }
+
+    .menu {
+        .menu-container {
+            padding: 10px;
+
+            ul {
+                list-style-type: none;
+                margin: 0;
+                padding: 0;
+
+                li {
+                    display: inline-block;
+                    margin-right: 10px;
+                    width: 100%;
+                    color: #ccc;
+                    padding: 10px;
+                }
+            }
+        }
+    }
+
+    .general {
+        .menu-container {
+            padding: 10px;
+
+            ul {
+                list-style-type: none;
+                margin: 0;
+                padding: 0;
+
+                li {
+                    display: inline-block;
+                    margin-right: 10px;
+                    width: 100%;
+                    color: #ccc;
+                    padding: 10px;
+                }
+            }
+        }
+    }
+
+    .payment {
+        width: 100%;
+
+        .payment-box {
+            border: 3px dotted #ccc;
+            border-radius: 8px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 150px;
+            margin: 10px;
+        }
+    }
+}
